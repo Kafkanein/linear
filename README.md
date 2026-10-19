@@ -8,6 +8,12 @@
 **Author / project direction:** Jimmy Kahn, with an AI coding assistant.  
 **Status:** Independent speculative application prototype. Not affiliated with Burq. All operations and data are synthetic.
 
+## Launch the interactive demo
+
+[**Open Decision / Receipt in your browser**](https://rawcdn.githack.com/Kafkanein/linear/58c56a656a7364a1db89f1b985daad92c8770fba/index.html)
+
+Source: [index.html](https://github.com/Kafkanein/linear/blob/main/index.html). This self-contained HTML app runs without a backend, API keys or login. The public preview is served by a third-party static-file CDN until native GitHub Pages is configured.
+
 ## Try it
 
 Open `index.html` in any modern browser. No installation, API keys, Python, backend, account, network access, or customer data required. The app is intentionally small enough to inspect fully.
@@ -46,7 +52,7 @@ Try Normal / 80% first and inspect individual receipts. Then try Rainstorm / 95%
 - `index.html` - semantic UI
 - `styles.css` - responsive visual system
 - `app.js` - seeded synthetic generator, actual model training, assignment optimizer, decision receipt, and update loop
-- `tests.cjs` - small Playwright integration test (requires Playwright installed)
+- `tests.py` - Playwright integration test (requires Python and Playwright installed)
 
 ## Privacy & security
 
