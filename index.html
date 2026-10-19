@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="A working, synthetic-data delivery intelligence audition. Train a model, optimize courier assignment, inspect decision receipts, simulate fulfillment, and measure model feedback.">
+  <title>Decision Receipt | A live audition for Burq</title>
+  <style>
+:root{--bg:#0b1016;--panel:#121c26;--panel2:#16232d;--text:#f1f6f4;--muted:#98a7b0;--weak:#6a7c87;--line:#283842;--green:#abffcb;--mint:#7deaba;--yellow:#f6d890;--red:#ff998e;--navy:#0b1016;--display:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:ui-monospace,Menlo,Consolas,monospace}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.56 var(--display);-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--green);outline-offset:4px}::selection{background:var(--mint);color:#06130b}.site-shell{max-width:1440px;margin:0 auto}.topbar{height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 54px;border-bottom:1px solid var(--line)}.wordmark{display:flex;align-items:center;gap:12px;font-weight:860;font-size:14px;letter-spacing:.06em}.brand-thin{font-weight:350;color:var(--green)}.brand-icon{width:34px;height:34px;color:var(--bg);background:var(--green);display:grid;place-items:center;font-size:17px;font-weight:900;position:relative;border-radius:8px}.brand-dot{position:absolute;width:5px;height:5px;background:var(--bg);border-radius:50%;bottom:7px;right:6px}.topbar-right{display:flex;align-items:center;gap:12px;font:11px var(--mono);letter-spacing:.04em;color:var(--muted)}.topbar-right a:hover{color:var(--green)}.live-dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}.top-sep{color:#52636d}.hero{padding:64px 54px 22px}.eyebrow,.section-kicker,.panel-heading,.hero-edition,.note-label{font:11px var(--mono);font-weight:700;letter-spacing:.09em}.eyebrow{display:flex;gap:14px;align-items:center;color:var(--green)}.eyebrow-line{height:1px;width:26px;background:var(--green)}.hero-edition{margin-left:auto;color:var(--weak)}.hero-grid{display:grid;grid-template-columns:1.22fr .78fr;gap:44px;align-items:center;padding:25px 0 44px}.hero h1{font-size:clamp(52px,6vw,90px);font-weight:740;line-height:.99;letter-spacing:-.065em;margin:0 0 26px}.hero h1 em{font-weight:560;font-style:normal;color:var(--green)}.hero-copy{font-size:18px;line-height:1.6;color:#c2cfd3;max-width:600px;margin:0 0 28px}.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;gap:18px;justify-content:space-between;align-items:center;padding:13px 20px;border:1px solid var(--line);font:11px var(--mono);font-weight:750;letter-spacing:.065em;min-height:43px;border-radius:6px;transition:background .18s,color .18s,border .18s}.btn-primary{background:var(--green);color:#092015;border-color:var(--green)}.btn-primary:hover{background:#cfffdf;border-color:#cfffdf}.btn-quiet{color:var(--green);background:transparent;border-color:#3b6653}.btn-quiet:hover{background:#193c30}.btn-secondary{background:#162b26;border-color:#38614d;color:var(--green)}.btn-secondary:hover:enabled{background:#234637}.btn-block{width:100%}.manifesto-card{background:linear-gradient(128deg,#182932 0%,#111f25 68%,#18272e 100%);border:1px solid #395044;min-height:277px;border-radius:9px;padding:26px 28px;box-shadow:0 24px 60px #0004;position:relative;overflow:hidden}.manifesto-card:before{content:"";position:absolute;right:-76px;top:-124px;width:320px;height:320px;border:1px solid #456d54;border-radius:50%;box-shadow:0 0 0 40px #24483330,0 0 0 80px #24483322;pointer-events:none}.manifesto-cap{display:flex;justify-content:space-between;color:var(--green);font:10px var(--mono);letter-spacing:.13em}.manifesto-cap span{color:#9bb6ab}.manifesto-card p{font-size:clamp(19px,2.4vw,30px);letter-spacing:-.035em;line-height:1.4;margin:45px 0 30px;position:relative}.manifesto-card strong{color:var(--green);font-weight:720}.manifesto-foot{display:flex;gap:10px;align-items:center;position:relative;font:10px var(--mono);color:#b5c6bd}.tiny-square{width:8px;height:8px;background:var(--green);display:inline-block}.tiny-connector{width:22px;height:1px;background:#6a9980}.integrity-banner{display:flex;align-items:flex-start;gap:14px;border-top:1px solid var(--line);padding:17px 0 0;color:#9cafb2;font-size:12px;line-height:1.65}.integrity-banner b{color:#c7d6d3}.integrity-mark{flex-shrink:0;border:1px solid #6b9281;color:var(--green);border-radius:100%;width:20px;height:20px;display:grid;place-items:center;font:12px var(--mono)}.section{padding:64px 54px 44px}.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:28px}.section-kicker{color:var(--mint);margin-bottom:9px}.section h2{font-size:clamp(32px,3vw,44px);letter-spacing:-.045em;line-height:1.12;font-weight:690;margin:0}.signal-dot{color:var(--green)}.section-top>p{color:var(--muted);font-size:14px;max-width:470px;margin:0 0 3px;line-height:1.6}.lab{padding-top:55px}.lab-grid{display:grid;grid-template-columns:308px minmax(0,1fr);gap:16px;align-items:stretch}.card{border:1px solid var(--line);border-radius:7px;background:var(--panel)}.controls{padding:20px;display:flex;flex-direction:column;gap:24px}.panel-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#eaf0ee;letter-spacing:.06em}.panel-id{color:#6f8995;font-weight:400;letter-spacing:.03em;text-align:right}.scenario-field{border:0;margin:0;padding:0}.scenario-field legend,.control-head label{font-size:13px;font-weight:650;color:#e5eeed;margin-bottom:11px}.scenario-tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}.scenario{border:1px solid #2c4450;background:#192b36;border-radius:4px;color:#9caeb4;font:10px var(--mono);padding:10px 2px}.scenario:hover{border-color:#6caa90}.scenario.active{border-color:var(--green);color:var(--bg);background:var(--green);font-weight:750}.control-head{display:flex;align-items:center;justify-content:space-between}.control-head output{font:12px var(--mono);color:var(--green)}input[type="range"]{width:100%;accent-color:var(--green);height:6px;margin:13px 0}.range-ends{display:flex;justify-content:space-between;color:#728792;font:9px var(--mono)}.policy-note{margin-top:0;display:flex;gap:10px;padding:13px;background:#1e2e2d;border-left:2px solid var(--yellow);font-size:12px;line-height:1.56;color:#bbcdc6}.policy-note b{color:#e7f1df}.policy-icon{color:var(--yellow);font:18px var(--mono)}.action-area{margin-top:auto;display:grid;gap:10px}.text-button{background:none;border:0;color:#91a5ae;text-decoration:underline;text-underline-offset:4px;font:11px var(--mono);padding:8px}.text-button:hover{color:var(--green)}.workspace{min-width:0;display:flex;flex-direction:column;gap:12px}.statusbar{display:flex;justify-content:space-between;gap:12px;color:#9db5a8;font:10px var(--mono);letter-spacing:.065em;align-items:center;padding:4px 3px}.statusbar>div{display:flex;gap:9px;align-items:center}.status-light{width:7px;height:7px;background:#80e5a7;border-radius:50%}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{background:#172631;border:1px solid #2c414b;border-radius:6px;padding:15px 16px}.metric-title{font:10px var(--mono);letter-spacing:.08em;color:#adbbc1;white-space:nowrap}.metric-i{color:#6b838a;cursor:help}.metric>div{display:flex;gap:8px;align-items:baseline;margin:11px 0 4px}.metric strong{font:700 36px/1 var(--display);letter-spacing:-.06em}.metric small{font:11px var(--mono);color:var(--green)}.metric-hint{font-size:10px;color:#7f98a0}.board{overflow:hidden;min-height:326px}.board .panel-heading{padding:18px 20px;border-bottom:1px solid var(--line)}.board-head,.assignment{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1.25fr) .8fr .75fr;align-items:center;gap:9px;padding-left:20px;padding-right:20px}.board-head{padding-top:12px;padding-bottom:12px;color:#8296a0;font:10px var(--mono);letter-spacing:.03em}.assignment{width:100%;text-align:left;background:transparent;border:0;border-top:1px solid #2a3a46;padding-top:14px;padding-bottom:14px;color:#e1efee;transition:background .15s}.assignment:hover,.assignment.selected{background:#19372f}.assignment.selected{box-shadow:inset 3px 0 var(--green)}.cell-main{font-size:13px;font-weight:670}.cell-sub{font-size:10px;color:#90a5af;margin-top:2px;display:block}.eta{font:14px var(--mono);font-weight:700}.risk-pill{display:inline-block;padding:5px 8px;border-radius:4px;text-align:center;font:10px var(--mono);font-weight:750;background:#234035;color:#adffcc}.risk-pill.high{background:#49282a;color:#ffaaa1}.risk-pill.mid{background:#443d2a;color:#ffe0a0}.risk-pill.missing{background:#3b3f49;color:#bcc2ce}.empty-state{text-align:center;padding:44px 20px}.empty-state h3{margin:0 0 5px;font-size:17px}.empty-state p{color:#80929c;font-size:12px;max-width:290px;margin:0 auto}.empty-symbol{color:var(--green);font-size:38px;display:block;margin-bottom:10px}.subboard{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1}.comparison,.intelligence{padding:18px 19px}.comparison>p{font-size:12px;color:#a2b1b8;margin:18px 0}.barrow{display:grid;grid-template-columns:100px minmax(0,1fr) 32px;gap:9px;align-items:center;margin:15px 0}.barrow>span{font:9px var(--mono);color:#b0c2c8}.barrow b{font:12px var(--mono);text-align:right}.track{height:9px;background:#30404b;border-radius:7px;overflow:hidden}.bar{height:100%;border-radius:7px;transition:width .4s ease}.baseline{background:#f8ba91}.improved{background:var(--green)}.model-lines{margin-top:17px;display:grid;gap:12px}.model-lines>div{border-top:1px solid #2b3b46;padding-top:9px;display:grid;grid-template-columns:61px 1fr;gap:9px}.model-lines span{font:10px var(--mono);color:#7e98a1}.model-lines b{font-weight:540;color:#cad8da;font-size:11px;line-height:1.5}.receipts-section{padding-top:46px}.receipt-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:15px}.receipt-card,.learning-card{padding:23px;min-height:390px}.receipt-detail{margin-top:21px}.receipt-placeholder{color:#92a7ad;font-size:14px}.receipt-big{font-size:23px;letter-spacing:-.035em;line-height:1.2;font-weight:680;margin:0 0 11px}.receipt-summary{font-size:14px;line-height:1.6;color:#aec1c1;max-width:480px;margin:0 0 16px}.receipt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.receipt-field{border:1px solid #2a3d45;border-radius:5px;padding:10px 12px;background:#152630}.receipt-field span{display:block;color:#90a5ac;font:10px var(--mono);margin-bottom:4px}.receipt-field strong{font-weight:630;font-size:15px}.receipt-note{border-left:2px solid var(--mint);background:#1a2f2b;color:#c1d9cb;padding:12px 15px;font-size:12px;margin-top:14px}.receipt-note.red{border-color:var(--red);background:#322728;color:#ffe2d9}.loop-metric{display:grid;grid-template-columns:1fr 1fr;margin:21px 0 4px}.loop-metric>div{border-top:1px solid #364752;padding-top:12px}.loop-metric span{display:block;font-size:11px;color:#8b9fa8}.loop-metric strong{display:block;font-size:29px;letter-spacing:-.035em}.spark-chart{height:108px;margin:15px 0;overflow:hidden}.spark-chart svg{width:100%;height:100%}.learning-note{color:#a8b9c0;font-size:12px;line-height:1.6;min-height:35px}.test-card{padding:13px;background:#21352e;border:1px solid #3f6651;border-radius:5px;margin-top:16px}.test-card>span{font:10px var(--mono);color:var(--green)}.test-card p{margin:7px 0 10px;color:#d4dfda;font-size:12px}.btn-small{padding:10px 12px;color:#c6f5d5;border:1px solid #629978;background:#244537;font-size:10px}.btn-small:hover{background:#305f47}.inside-section{padding-top:46px;padding-bottom:70px}.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:6px;overflow:hidden}.principle{padding:28px;border-right:1px solid var(--line);min-height:220px}.principle:last-child{border-right:0}.principle-number{font:12px var(--mono);color:var(--green)}.principle h3{font-size:21px;letter-spacing:-.035em;margin:22px 0 10px}.principle p{font-size:13px;color:#a5b6bc;line-height:1.75;margin:0}.build-note{margin-top:17px;border:1px solid #3f554b;border-radius:5px;background:linear-gradient(120deg,#162921,#152126);padding:25px 29px;display:grid;grid-template-columns:160px 1fr;gap:20px}.note-label{color:var(--green)}.build-note p{margin:0 0 10px;font-size:13px;line-height:1.75;color:#d0dfda}.build-note p:last-child{margin:0}.build-note .note-small{font-size:11px;color:#a7bbb2}.footer{padding:26px 54px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;font:11px var(--mono);font-weight:700;color:var(--green)}.footer span{color:#8da6a0}.foot-mark{color:#647b82!important}
+@media(max-width:1080px){.topbar,.hero,.section,.footer{padding-left:28px;padding-right:28px}.lab-grid{grid-template-columns:265px minmax(0,1fr)}.subboard{grid-template-columns:1fr}.hero-grid{gap:24px}.manifesto-card{padding:22px}.board-head,.assignment{grid-template-columns:1.3fr 1fr .7fr .65fr}.barrow{grid-template-columns:115px minmax(0,1fr) 28px}}
+@media(max-width:760px){.topbar{padding:0 20px;height:70px}.topbar-right{font-size:9px}.topbar-right .top-sep,.topbar-right a{display:none}.hero,.section,.footer{padding-left:20px;padding-right:20px}.hero{padding-top:35px}.hero-edition{display:none}.hero-grid{grid-template-columns:1fr;padding-top:22px;gap:30px}.hero h1{font-size:clamp(49px,10vw,76px)}.hero-copy{font-size:16px}.manifesto-card{min-height:210px}.manifesto-card p{margin:30px 0 25px}.section{padding-top:50px;padding-bottom:25px}.section-top{align-items:start;flex-direction:column;gap:10px}.lab-grid,.receipt-layout,.principles-grid{grid-template-columns:1fr}.controls{gap:19px}.controls .action-area{margin-top:0}.metrics{gap:6px}.metric{padding:12px 8px}.metric strong{font-size:28px}.metric-title{font-size:8px}.metric-hint{font-size:9px}.board-head,.assignment{padding-left:11px;padding-right:11px;gap:6px;grid-template-columns:1.15fr 1fr .65fr .65fr}.board-head{font-size:8px}.cell-main{font-size:11px}.cell-sub{font-size:9px}.risk-pill{font-size:9px;padding:5px 4px}.eta{font-size:12px}.subboard{grid-template-columns:1fr}.principle{border-right:0;border-bottom:1px solid var(--line);min-height:0;padding:22px}.principle:last-child{border-bottom:0}.build-note{grid-template-columns:1fr;gap:10px;padding:21px}.receipt-card,.learning-card{min-height:0}.footer{flex-direction:column;gap:7px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+</style>
+  
+</head>
+<body>
+<div class="site-shell">
+  <header class="topbar">
+    <a href="#top" class="wordmark" aria-label="Decision Receipt home"><span class="brand-icon">D<span class="brand-dot"></span></span><span>DECISION<span class="brand-thin">/RECEIPT</span></span></a>
+    <div class="topbar-right"><span class="live-dot" aria-hidden="true"></span><span>WORKING PROTOTYPE</span><span class="top-sep">/</span><a href="#inside">READ THE BUILD NOTE <span aria-hidden="true">&#8599;</span></a></div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> A LIVE AUDITION FOR THE BURQ TEAM <span class="hero-edition">001 / BUILT OCT 2026</span></div>
+      <div class="hero-grid">
+        <div>
+          <h1>Every dispatch<br>gets <em>a receipt.</em></h1>
+          <p class="hero-copy">Dear Burq: I could tell you I build data and AI systems. Or I could give you a tiny one, hand you the controls, and let you try to break it.</p>
+          <div class="hero-ctas"><a href="#lab" class="btn btn-primary">TEST THE SYSTEM <span aria-hidden="true">&#8599;</span></a><a href="#inside" class="btn btn-quiet">HOW IT REALLY WORKS <span aria-hidden="true">&#8594;</span></a></div>
+        </div>
+        <div class="manifesto-card"><div class="manifesto-cap">THE DESIGN THESIS <span>01/03</span></div><p>Predictions are cheap.<br><strong>Accountable decisions</strong><br>are the product.</p><div class="manifesto-foot"><span class="tiny-square"></span> PREDICT <span class="tiny-connector"></span> DECIDE <span class="tiny-connector"></span> LEARN</div></div>
+      </div>
+      <div class="integrity-banner"><span class="integrity-mark">i</span><span><b>Scope, without theatre.</b> Entirely synthetic delivery data. A real browser-trained regression model and exact small-batch assignment optimization. No live Burq data, no external AI API, no claim of production ML.</span></div>
+    </section>
+
+    <section class="lab section" id="lab" aria-labelledby="lab-title">
+      <div class="section-top"><div><div class="section-kicker">01 / PUT IT UNDER PRESSURE</div><h2 id="lab-title">The dispatch lab<span class="signal-dot">.</span></h2></div><p>Change operating conditions. Retrain is automatic on first load. Run an assignment, inspect every tradeoff, then simulate the outcome.</p></div>
+      <div class="lab-grid">
+        <aside class="controls card">
+          <div class="panel-heading"><span>OPERATING CONDITIONS</span><span class="panel-id">CONTROL / 01</span></div>
+          <fieldset class="scenario-field"><legend>Stress test</legend><div class="scenario-tabs" role="group" aria-label="Stress test scenario"><button class="scenario active" type="button" data-scenario="normal" aria-pressed="true">NORMAL</button><button class="scenario" type="button" data-scenario="rush" aria-pressed="false">LUNCH RUSH</button><button class="scenario" type="button" data-scenario="storm" aria-pressed="false">RAINSTORM</button></div></fieldset>
+          <div class="control-group"><div class="control-head"><label for="risk">Late delivery penalty</label><output for="risk" id="risk-val">3.0x</output></div><input id="risk" type="range" min="1" max="6" value="3" step="0.5"><div class="range-ends"><span>OPTIMIZE SPEED</span><span>PROTECT THE PROMISE</span></div></div>
+          <div class="control-group"><div class="control-head"><label for="trust">Courier reliability floor</label><output for="trust" id="trust-val">80%</output></div><input id="trust" type="range" min="70" max="98" value="80" step="1"><div class="range-ends"><span>FLEXIBLE</span><span>STRICT</span></div></div>
+          <div class="policy-note"><span class="policy-icon">!</span><span><b>Fail-closed guardrail.</b> If no courier meets the trust floor, the tool leaves an order unassigned instead of inventing a safe option.</span></div>
+          <div class="action-area"><button type="button" id="dispatch" class="btn btn-primary btn-block">RUN THE DISPATCH <span aria-hidden="true">&#8594;</span></button><button type="button" id="fulfill" class="btn btn-secondary btn-block" disabled>REPLAY ACTUAL OUTCOMES <span aria-hidden="true">&#8635;</span></button><button type="button" id="reset" class="text-button">RESET LAB / BASELINE</button></div>
+        </aside>
+        <div class="workspace">
+          <div class="statusbar"><div><span class="status-light"></span><span id="scenario-label">CLEAR CONDITIONS</span></div><span id="status-text" role="status" aria-live="polite">READY TO DISPATCH</span></div>
+          <div class="metrics"><div class="metric"><span class="metric-title">MODEL TEST MAE <span class="metric-i" title="Mean absolute error on held-out synthetic trips">?</span></span><div><strong id="mae">--</strong><small>MIN</small></div><span class="metric-hint">Held-out synthetic sample</span></div><div class="metric"><span class="metric-title">EXPECTED SLA MISSES</span><div><strong id="late-count">--</strong><small>/ 5</small></div><span class="metric-hint">Expected late or unassigned</span></div><div class="metric"><span class="metric-title">ORDERS ASSIGNED</span><div><strong id="assigned-count">--</strong><small>/ 5</small></div><span class="metric-hint">Subject to trust guardrails</span></div></div>
+          <div class="card board"><div class="panel-heading"><span>DECISION BOARD</span><span class="panel-id" id="board-ref">AWAITING DISPATCH</span></div><div class="board-head"><span>ORDER / PROMISE</span><span>ASSIGNED</span><span>MODEL ETA</span><span>LATE RISK</span></div><div id="assignments" class="board-body"><div class="empty-state"><span class="empty-symbol">&#8984;</span><h3>No decisions yet.</h3><p>Run the dispatch to see the model choose, explain, or decline an assignment.</p></div></div></div>
+          <div class="subboard"><div class="comparison card"><div class="panel-heading"><span>COUNTERFACTUAL / COMPARE</span><span class="panel-id">NEAREST VS SMARTER</span></div><p>What changes when the system optimizes expected lateness instead of sending the nearest courier?</p><div class="barrow"><span>NEAREST ELIGIBLE</span><div class="track"><div class="bar baseline" id="bar-baseline" style="width:0%"></div></div><b id="baseline-stat">--</b></div><div class="barrow"><span>MODEL + POLICY</span><div class="track"><div class="bar improved" id="bar-optimized" style="width:0%"></div></div><b id="optimized-stat">--</b></div><small class="metric-hint">Bars show expected late or unassigned orders; lower is better. Optimization also considers time and distance.</small></div><div class="intelligence card"><div class="panel-heading"><span>WHAT THE SYSTEM KNOWS</span><span class="panel-id">MODEL CARD</span></div><div class="model-lines"><div><span>Model</span><b>Ridge-trained linear ETA regression</b></div><div><span>Features</span><b>Distance, congestion, weather, peak, reliability, stops</b></div><div><span>Training</span><b id="training-desc">1200 synthetic, 300 held-out</b></div><div><span>Serving</span><b>Local browser / no network</b></div></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section receipts-section" id="receipts"><div class="section-top"><div><div class="section-kicker">02 / SHOW YOUR WORK</div><h2>Not a black box<span class="signal-dot">.</span></h2></div><p>Every assignment earns a decision receipt: input, prediction, constraint check, alternate choice and observed outcome. Click a row in the dispatch board.</p></div><div class="receipt-layout"><div class="card receipt-card" id="receipt-card"><div class="panel-heading"><span>DECISION RECEIPT</span><span class="panel-id" id="receipt-id"># PENDING</span></div><div id="receipt-detail" class="receipt-detail"><p class="receipt-placeholder">No black-box story to tell yet. Run the lab, then select a dispatch.</p></div></div><div class="card learning-card"><div class="panel-heading"><span>CLOSED-LOOP LEARNING</span><span class="panel-id">OBSERVE / UPDATE</span></div><div class="loop-metric"><div><span>Observed deliveries</span><strong id="observed-count">0</strong></div><div><span>Latest prediction error</span><strong id="error-count">--</strong></div></div><div class="spark-chart"><svg id="history-chart" viewBox="0 0 500 124" role="img" aria-label="Prediction error by round"><line x1="0" y1="110" x2="500" y2="110" stroke="#31404d" stroke-width="1"/><text x="4" y="18" fill="#738391" font-size="11">MODEL ERROR AFTER FEEDBACK</text><polyline id="history-line" points="" stroke="#a8ffcb" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"/><circle id="history-dot" cx="0" cy="0" r="0" fill="#a8ffcb"/></svg></div><p class="learning-note" id="learning-note">Run a dispatch, then replay fulfillment. The outcomes will be synthetic, but the model update is real.</p><div class="test-card"><span>RECRUITER CHALLENGE</span><p>Try <b>Rainstorm</b> with a <b>95% reliability floor</b>. Watch whether the system admits it cannot safely fulfill every promise.</p><button type="button" id="challenge" class="btn btn-small">RUN THE CHALLENGE <span aria-hidden="true">&#8594;</span></button></div></div></div></section>
+
+    <section class="section inside-section" id="inside"><div class="section-top"><div><div class="section-kicker">03 / THE UNUSUAL PART</div><h2>This *is* the application<span class="signal-dot">.</span></h2></div><p>Rather than claim that I know how to talk about AI, here's a working artifact that makes specific choices under constraints.</p></div><div class="principles-grid"><div class="principle"><span class="principle-number">01</span><h3>Actual learned model.</h3><p>Regression parameters are fitted in your browser to synthetic delivery history. Holdout error is computed, not hard-coded.</p></div><div class="principle"><span class="principle-number">02</span><h3>Optimization with teeth.</h3><p>A tiny exhaustive assignment search balances predicted delays and distance, while hard policy rules can reject tempting but unsafe options.</p></div><div class="principle"><span class="principle-number">03</span><h3>No fake agent.</h3><p>This demo uses an interpretable model plus explicit decisions, not an LLM behind a decorative chat box. Agents would come after identity, tools, permissions and evaluation.</p></div></div><div class="build-note"><div class="note-label">BUILD LOG / V1</div><div><p><strong>What I would ship next:</strong> production-grade routing and dispatch constraints, calibrated probabilistic models on consented operational data, streaming event capture, auditable feature store, model registry, shadow deployment and human-controlled agentic exceptions. Offline improvements only count after live measurement.</p><p class="note-small"><b>Provenance:</b> Independent speculative application prototype, directed by Jimmy Kahn and implemented with an AI coding assistant in October 2026. It is not affiliated with, commissioned by, or connected to Burq. All names, couriers, jobs, data and performance metrics are fictional. No backend, external model or private operational data.</p></div></div></section>
+  </main>
+  <footer class="footer"><div>BUILT TO BE BROKEN. <span>THEN IMPROVED.</span></div><div>AN APPLICATION EXPERIMENT BY JIMMY KAHN <span class="foot-mark">/ 2026</span></div></footer>
+</div>
+<script>
+/*
+ * DECISION / RECEIPT
+ * An independent, synthetic-data ML and operations research demonstration.
+ * Real model fitting, small-scale exact assignment optimization, honest simulation.
+ * No external libraries, telemetry, AI API, or hidden network dependencies.
+ * Made as an AI-assisted coding exercise for a Burq Head of Data & AI application.
+ */
+(() => {
+  'use strict';
+
+  const $ = (id) => document.getElementById(id);
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+  const sigmoid = (z) => 1 / (1 + Math.exp(-clamp(z, -30, 30)));
+  const fmt = (v, digits = 1) => Number.isFinite(v) ? v.toFixed(digits) : '--';
+  function mulberry32(seed) {
+    return function () {
+      let t = seed += 0x6D2B79F5;
+      t = Math.imul(t ^ t >>> 15, t | 1);
+      t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+  const uniform = (r, a, b) => a + (b - a) * r();
+  // Box-Muller yields a small approximation to real-world variation.
+  const normal = (r) => Math.sqrt(-2 * Math.log(Math.max(r(), 1e-12))) * Math.cos(2 * Math.PI * r());
+
+  const ORDERS = [
+    {id:'B-1041', merchant:'Cedar Market', destination:'WEST LOOP', distance:5.2, traffic:.48, promise:27, stops:0, priority:'Express'},
+    {id:'B-1042', merchant:'Sunbird Bowl', destination:'WATERFRONT', distance:3.4, traffic:.65, promise:25, stops:0, priority:'Standard'},
+    {id:'B-1043', merchant:'Paper & Co.', destination:'MIDTOWN', distance:7.2, traffic:.35, promise:34, stops:1, priority:'Express'},
+    {id:'B-1044', merchant:'Civic Flowers', destination:'UPTOWN', distance:4.6, traffic:.20, promise:25, stops:0, priority:'Standard'},
+    {id:'B-1045', merchant:'Basil Grocer', destination:'WAREHOUSE', distance:6.8, traffic:.52, promise:38, stops:1, priority:'Standard'},
+  ];
+  const COURIERS = [
+    {id:'C-28', name:'Nora', reliability:.99},
+    {id:'C-42', name:'Amir', reliability:.95},
+    {id:'C-11', name:'June', reliability:.91},
+    {id:'C-07', name:'Theo', reliability:.87},
+    {id:'C-35', name:'Ari', reliability:.82},
+  ];
+  // Synthetic courier positions, represented by distance to each pickup.
+  const PICKUP_KM = [
+    [1.3,1.4,2.0,1.4,0.1],
+    [1.2,1.1,2.0,1.5,1.1],
+    [2.0,1.2,0.5,1.9,2.1],
+    [1.8,0.6,2.1,1.2,2.3],
+    [2.8,2.1,1.4,1.0,0.2]
+  ];
+  const SCENARIOS = {
+    normal:{name:'CLEAR CONDITIONS',traffic:0,rain:0,peak:0,code:11},
+    rush:{name:'LUNCH RUSH / PEAK',traffic:.36,rain:0,peak:1,code:23},
+    storm:{name:'RAINSTORM / DEGRADED',traffic:.45,rain:1,peak:0,code:37}
+  };
+
+  function engineeredFeatures(f) {
+    return [f.distance, f.traffic, f.rain, f.peak, 1 - f.reliability, f.stops, f.distance * f.traffic];
+  }
+  // This is the latent synthetic-world generator. It is intentionally kept
+  // separate from the learned model and contains noise the model cannot observe.
+  function worldMinutes(f, r) {
+    return Math.max(6,
+      5.6 + 2.47*f.distance + 7.2*f.traffic + 5.1*f.rain + 3.9*f.peak +
+      8.0*(1-f.reliability) + 3.1*f.stops + .64*f.distance*f.traffic + 2.1*normal(r));
+  }
+  function createTrainingData() {
+    const r = mulberry32(10092026);
+    const rows = [];
+    for(let i=0;i<1500;i++) {
+      const f={distance:uniform(r,.8,12),traffic:uniform(r,.06,1.25),rain:r()<.28?1:0,
+        peak:r()<.40?1:0,reliability:uniform(r,.72,1),stops:r()<.24?1:0};
+      rows.push({f, y:worldMinutes(f,r)});
+    }
+    return {train:rows.slice(0,1200),test:rows.slice(1200)};
+  }
+
+  class ETARegression {
+    constructor(training) {
+      const features=training.train.map(v=>engineeredFeatures(v.f));
+      this.means=features[0].map((_,j)=>features.reduce((a,v)=>a+v[j],0)/features.length);
+      this.deviations=features[0].map((_,j)=>{
+        const variance=features.reduce((a,v)=>a+(v[j]-this.means[j])**2,0)/features.length;
+        return Math.max(Math.sqrt(variance),.15);
+      });
+      this.weights=Array(features[0].length+1).fill(0);
+      this.weights[0]=training.train.reduce((s,v)=>s+v.y,0)/training.train.length;
+      this.test=training.test;
+      const examples=training.train.map(v=>({x:this.vector(v.f),y:v.y}));
+      // Full-batch regularized gradient descent, using standardized features.
+      // Enough iterations to converge without over-fitting the synthetic sample.
+      for(let epoch=0;epoch<850;epoch++) {
+        const grads=this.weights.map(()=>0);
+        for(const {x,y} of examples) {
+          const error=this.dot(x)-y;
+          for(let k=0;k<x.length;k++) grads[k]+=error*x[k];
+        }
+        for(let k=0;k<this.weights.length;k++) {
+          const penalty=k===0?0:.001*this.weights[k];
+          this.weights[k]-=.06*(grads[k]/examples.length+penalty);
+        }
+      }
+    }
+    vector(f) {return [1,...engineeredFeatures(f).map((v,j)=>(v-this.means[j])/this.deviations[j])];}
+    dot(x) {return this.weights.reduce((s,w,j)=>s+w*x[j],0);}
+    predict(f) {return Math.max(3,this.dot(this.vector(f)));}
+    testMAE() {return this.test.reduce((s,v)=>s+Math.abs(this.predict(v.f)-v.y),0)/this.test.length;}
+    observe(f,actual) {
+      // Small bounded online update based on an observed delivery.
+      const x=this.vector(f),prediction=this.dot(x),err=clamp(prediction-actual,-18,18);
+      for(let j=0;j<x.length;j++) this.weights[j]-=.017*err*x[j];
+      return actual-prediction;
+    }
+  }
+
+  const sourceData=createTrainingData();
+  let model=new ETARegression(sourceData);
+  let scenario='normal';
+  let current=null;
+  let receiptIndex=0;
+  let round=0;
+  let history=[];
+  let totalObserved=0;
+  const $status=$('status-text');
+
+  function activeConfig() {
+    return {scenario,scenarioData:SCENARIOS[scenario],risk:Number($('risk').value),trust:Number($('trust').value)/100};
+  }
+  function scoreOption(orderIndex,courierIndex,config) {
+    const order=ORDERS[orderIndex],c=COURIERS[courierIndex];
+    const pickup=PICKUP_KM[orderIndex][courierIndex];
+    const f={distance:order.distance + .45*pickup, traffic:clamp(order.traffic+config.scenarioData.traffic,0,1.3),
+      rain:config.scenarioData.rain,peak:config.scenarioData.peak,reliability:c.reliability,stops:order.stops};
+    const predicted=model.predict(f)+1.55*pickup;
+    const risk=clamp(sigmoid((predicted-order.promise)/3.2)*(.82+2.2*(1-c.reliability)),.012,.995);
+    const cost=.4*predicted+config.risk*23*risk+.75*pickup;
+    const eligible=c.reliability>=config.trust;
+    return {orderIndex,courierIndex,pickup,f,predicted,risk,cost,eligible};
+  }
+  function matrixFor(config){return ORDERS.map((o,i)=>COURIERS.map((c,j)=>scoreOption(i,j,config)));}
+  function bruteForceOptimization(matrix) {
+    let bestCost=Infinity,best=null,visited=0;
+    function walk(i,used,cost,choices){
+      if(cost>=bestCost)return;
+      if(i===ORDERS.length){visited++;bestCost=cost;best=[...choices];return;}
+      const eligible=matrix[i].filter(opt=>opt.eligible && !used.has(opt.courierIndex));
+      for(const opt of eligible){used.add(opt.courierIndex);choices.push(opt);walk(i+1,used,cost+opt.cost,choices);choices.pop();used.delete(opt.courierIndex);}
+      // Reliable systems say "unassigned" when hard constraints cannot be met.
+      choices.push(null);walk(i+1,used,cost+132+(ORDERS[i].priority==='Express'?18:0),choices);choices.pop();
+    }
+    walk(0,new Set(),0,[]);
+    return {assignments:best,objective:bestCost,paths:visited};
+  }
+  function nearestBaseline(matrix){
+    const used=new Set();return matrix.map((choices)=>{
+      const c=choices.filter(v=>v.eligible&&!used.has(v.courierIndex)).sort((a,b)=>a.pickup-b.pickup)[0];
+      if(c)used.add(c.courierIndex);return c||null;
+    });
+  }
+  const expectedLate = xs => xs.reduce((s,x)=>s+(x?x.risk:1),0);
+  const assigned = xs => xs.filter(Boolean).length;
+  function setStatus(msg){$status.textContent=msg;}
+  function setButtons(){
+    document.querySelectorAll('.scenario').forEach(x=>{
+      const on=x.dataset.scenario===scenario;x.classList.toggle('active',on);x.setAttribute('aria-pressed',String(on));
+    });
+    $('risk-val').textContent=Number($('risk').value).toFixed(1)+'x';
+    $('trust-val').textContent=$('trust').value+'%';
+    $('scenario-label').textContent=SCENARIOS[scenario].name;
+  }
+  function resetVisuals(){
+    $('assignments').innerHTML='<div class="empty-state"><span class="empty-symbol">&#8984;</span><h3>No decisions yet.</h3><p>Run the dispatch to see the model choose, explain, or decline an assignment.</p></div>';
+    $('late-count').textContent='--';$('assigned-count').textContent='--';
+    $('bar-baseline').style.width='0%';$('bar-optimized').style.width='0%';
+    $('baseline-stat').textContent='--';$('optimized-stat').textContent='--';
+    $('board-ref').textContent='AWAITING DISPATCH';
+    $('receipt-id').textContent='# PENDING';
+    $('receipt-detail').innerHTML='<p class="receipt-placeholder">No black-box story to tell yet. Run the lab, then select a dispatch.</p>';
+    $('fulfill').disabled=true;
+  }
+  function invalidate(){current=null;resetVisuals();setButtons();setStatus('CONDITIONS UPDATED / RUN DISPATCH');}
+  function runDispatch(scroll=false){
+    const cfg=activeConfig(),matrix=matrixFor(cfg),result=bruteForceOptimization(matrix),baseline=nearestBaseline(matrix);
+    current={cfg,matrix,assignments:result.assignments,baseline,objective:result.objective,feedback:null,paths:result.paths};
+    round++;
+    receiptIndex=0;
+    renderBoard();renderReceipt();
+    const currentLate=expectedLate(current.assignments),baselineLate=expectedLate(baseline);
+    $('late-count').textContent=fmt(currentLate,1);
+    $('assigned-count').textContent=assigned(current.assignments);
+    $('bar-baseline').style.width=`${clamp(baselineLate/5*100,0,100)}%`;
+    $('bar-optimized').style.width=`${clamp(currentLate/5*100,0,100)}%`;
+    $('baseline-stat').textContent=fmt(baselineLate,1);
+    $('optimized-stat').textContent=fmt(currentLate,1);
+    $('board-ref').textContent=`ROUND ${String(round).padStart(2,'0')} / EXACT SEARCH`;
+    $('fulfill').disabled=assigned(current.assignments)===0;
+    setStatus(`${assigned(current.assignments)} ASSIGNED / ${5-assigned(current.assignments)} DECLINED`);
+    if(scroll)$('lab').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function renderBoard(){
+    if(!current)return;
+    $('assignments').innerHTML=current.assignments.map((v,i)=>{
+      const o=ORDERS[i]; const c=v?COURIERS[v.courierIndex]:null;
+      const riskClass=!v?'missing':v.risk>=.55?'high':v.risk>=.25?'mid':'';
+      const late=v?Math.round(v.risk*100)+'%':'HOLD';
+      return `<button type="button" class="assignment ${i===receiptIndex?'selected':''}" data-order="${i}" aria-label="Inspect decision for ${o.id}"><span><span class="cell-main">${o.id}</span><span class="cell-sub">${o.merchant} / ${o.promise}m</span></span><span><span class="cell-main">${c?c.name:'NOT ASSIGNED'}</span><span class="cell-sub">${c?Math.round(c.reliability*100)+'% RELIABLE':'TRUST FLOOR'}</span></span><span class="eta">${v?fmt(v.predicted,1)+'m':'--'}</span><span><span class="risk-pill ${riskClass}">${late}</span></span></button>`;
+    }).join('');
+    $('assignments').querySelectorAll('button[data-order]').forEach(node=>node.addEventListener('click',()=>{receiptIndex=Number(node.dataset.order);renderBoard();renderReceipt();}));
+  }
+  function renderReceipt(){
+    if(!current)return;
+    const i=receiptIndex,o=ORDERS[i],choice=current.assignments[i],baseline=current.baseline[i],alt=baseline?COURIERS[baseline.courierIndex].name:'unassigned';
+    $('receipt-id').textContent=`# ${o.id} / ROUND ${String(round).padStart(2,'0')}`;
+    if(!choice){
+      $('receipt-detail').innerHTML=`<h3 class="receipt-big">No defensible assignment.</h3><p class="receipt-summary">${o.merchant}: the courier reliability floor is ${Math.round(current.cfg.trust*100)}%. All qualifying capacity is already allocated. Better to surface the gap than misrepresent the promise.</p><div class="receipt-grid"><div class="receipt-field"><span>ORDER PROMISE</span><strong>${o.promise} MINUTES</strong></div><div class="receipt-field"><span>POLICY RESULT</span><strong>DECLINED / ESCALATE</strong></div><div class="receipt-field"><span>ALTERNATIVE</span><strong>Manual review</strong></div><div class="receipt-field"><span>ESCALATION</span><strong>Find new capacity</strong></div></div><div class="receipt-note red"><b>Hard constraint respected.</b> This lab never fabricates a compliant courier. In production this would trigger a live dispatch exception, capacity request and customer notification.</div>`;
+      return;
+    }
+    const courier=COURIERS[choice.courierIndex];
+    const different=baseline&&baseline.courierIndex!==choice.courierIndex;
+    const feedback=current.feedback?.[i];
+    const why=different?`Chosen over the nearest-first assignment (${alt}) after considering the forecast risk, promise and fleet-wide assignments.`:'Selected under the full-fleet cost and policy search, not just this route in isolation.';
+    $('receipt-detail').innerHTML=`<h3 class="receipt-big">${courier.name} gets ${o.id}.</h3><p class="receipt-summary">${why} All candidate assignments were evaluated against the same reliability floor.</p><div class="receipt-grid"><div class="receipt-field"><span>PREDICTED TRAVEL + PICKUP</span><strong>${fmt(choice.predicted,1)} MIN</strong></div><div class="receipt-field"><span>MISS-PROMISE PROBABILITY</span><strong>${Math.round(choice.risk*100)}%</strong></div><div class="receipt-field"><span>RELIABILITY GUARDRAIL</span><strong>${Math.round(courier.reliability*100)}% / PASS</strong></div><div class="receipt-field"><span>COUNTERFACTUAL: NEAREST</span><strong>${alt}</strong></div><div class="receipt-field"><span>ENGINEERED ROUTE</span><strong>${fmt(o.distance,1)} KM + ${fmt(choice.pickup,1)} KM PICKUP</strong></div><div class="receipt-field"><span>OBSERVED OUTCOME</span><strong>${feedback?fmt(feedback.actual,1)+' MIN / '+(feedback.late?'LATE':'ON TIME'):'NOT YET OBSERVED'}</strong></div></div><div class="receipt-note"><b>Prediction is not certainty.</b> Score is a simple synthetic ETA model plus explicit probability mapping, not a calibrated production SLA forecast. ${feedback?'Simulated actuals were recorded and used for an online learning update.':'Replay fulfillment to generate an observed event and update the model.'}</div>`;
+  }
+  function simulateFulfillment(){
+    if(!current||current.feedback)return;
+    const r=mulberry32(58213+round*101+SCENARIOS[scenario].code*359);
+    current.feedback=current.assignments.map((a,i)=>{
+      if(!a)return null;
+      const actual=worldMinutes(a.f,r)+1.55*a.pickup;
+      const residual=actual-a.predicted;
+      return {actual,late:actual>ORDERS[i].promise,residual};
+    });
+    const records=current.feedback.filter(Boolean),mae=records.reduce((s,x)=>s+Math.abs(x.residual),0)/records.length;
+    totalObserved+=records.length;
+    // Actual online updates (small, bounded). We do not claim synthetic feedback
+    // improves the model globally or guarantees monotonic results.
+    current.assignments.forEach((a,i)=>{if(a)model.observe(a.f,current.feedback[i].actual-1.55*a.pickup);});
+    $('mae').textContent=fmt(model.testMAE(),1);
+    $('observed-count').textContent=totalObserved;
+    $('error-count').textContent=fmt(mae,1)+'m';
+    $('learning-note').textContent=`Round ${round}: ${records.length} synthetic deliveries replayed. Prediction error: ${fmt(mae,1)} minutes MAE. The model received ${records.length} incremental weight updates; this does not prove production improvement.`;
+    history.push(mae);
+    plotHistory();
+    $('fulfill').disabled=true;
+    renderBoard();renderReceipt();
+    setStatus('FULFILLMENT REPLAYED / MODEL UPDATED');
+  }
+  function plotHistory(){
+    const pts=history.slice(-10),max=Math.max(4,...pts)*1.25,min=0;
+    const points=pts.map((v,i)=>{
+      const x=14+(pts.length===1?0:i/(pts.length-1)*470);
+      const y=109-(v-min)/(max-min)*83;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    });
+    $('history-line').setAttribute('points',points.join(' '));
+    const last=points[points.length-1];
+    if(last){const [x,y]=last.split(',');$('history-dot').setAttribute('cx',x);$('history-dot').setAttribute('cy',y);$('history-dot').setAttribute('r','4');}
+  }
+  function resetAll(){
+    scenario='normal';$('risk').value=3;$('trust').value=80;model=new ETARegression(sourceData);
+    current=null;receiptIndex=0;round=0;history=[];totalObserved=0;
+    $('mae').textContent=fmt(model.testMAE(),1);$('observed-count').textContent='0';$('error-count').textContent='--';
+    $('history-line').setAttribute('points','');$('history-dot').setAttribute('r','0');
+    $('learning-note').textContent='Run a dispatch, then replay fulfillment. The outcomes will be synthetic, but the model update is real.';
+    resetVisuals();setButtons();setStatus('READY TO DISPATCH');
+  }
+  document.querySelectorAll('.scenario').forEach(btn=>btn.addEventListener('click',()=>{scenario=btn.dataset.scenario;invalidate();}));
+  $('risk').addEventListener('input',invalidate);
+  $('trust').addEventListener('input',invalidate);
+  $('dispatch').addEventListener('click',()=>runDispatch());
+  $('fulfill').addEventListener('click',simulateFulfillment);
+  $('reset').addEventListener('click',resetAll);
+  $('challenge').addEventListener('click',()=>{
+    scenario='storm';$('risk').value=5.5;$('trust').value=95;setButtons();runDispatch(true);
+  });
+  resetAll();
+  // A tiny testing hook; no secrets or user data is exposed.
+  window.__demoTest={getState:()=>({round,scenario,assigned:current?assigned(current.assignments):null,
+    expectedLate:current?expectedLate(current.assignments):null,feedback:current?.feedback,
+    observed:totalObserved,modelMAE:model.testMAE()}),train:()=>new ETARegression(createTrainingData())};
+})();
+
+</script>
+</body>
+</html>
